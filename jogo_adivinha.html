@@ -21,14 +21,31 @@
   
   console.log(numeroPensado);
   
-  var chute = parseInt(prompt("Pensei em um número de 0 a " + n + ". Qual você acha que é?"));
+  var tentativas = 1;
 
-  if(chute == numeroPensado) {
-    mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
-  } else if(chute > numeroPensado) {
-    mostra("Você errou! Seu chute é maior que o número pensado!");
-  } else {
-    mostra("Você errou! Seu chute é menor que o número pensado!");
+  while(tentativas <= 3) {
+    
+    var chute = parseInt(prompt("Pensei em um número de 0 a " + n + ". Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+      
+      mostra("Uau! Você ACERTOU! O número pensado era " + numeroPensado);
+      break;
+
+    } else if(chute > numeroPensado) {
+      
+      mostra("Você ERROU! Seu chute é maior que o número pensado!");
+    
+    } else {
+      
+      mostra("Você ERROU! Seu chute é menor que o número pensado!");
+    
+    }
+
+    tentativas++;
+  
   }
+
+  mostra("FIM");
 
 </script>
