@@ -6,23 +6,22 @@
   function pulaLinha() {
 
     document.write("<br><br>")
-  
+  }
+
+  function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
   }
 
   var ano = 2016;
 
-  document.write("Flávio tem " + (ano - 1977) + " anos");
-  
-  pulaLinha();
+  mostra("Flávio tem " + (ano - 1977) + " anos")
 
-  document.write("Joaquim tem " + (ano - 1996) + " anos");
-  
-  pulaLinha();
+  mostra("Joaquim tem " + (ano - 1996) + " anos");
 
   ano = 2017;
   
-  document.write("Barney tem " + (ano - 1976) + " anos");
-  
-  pulaLinha();
+  mostra("Barney tem " + (ano - 1976) + " anos");
 
 </script>
